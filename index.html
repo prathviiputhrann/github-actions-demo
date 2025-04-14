@@ -1,11 +1,245 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My First GitHub Pages Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #45a049;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card .content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .project-card .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card .btn:hover {
+            background-color: #45a049;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This site is deployed using GitHub Actions 🚀</p>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Building the future, one line of code at a time.</p>
+        <a href="#projects">See My Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            I'm a passionate web developer with experience in building dynamic websites and applications. I enjoy
+            working with the latest technologies and solving real-world problems through code. In my spare time, I
+            contribute to open-source projects and continue learning new skills to stay ahead of the curve.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x300" alt="Project 1">
+                <div class="content">
+                    <h3>Project 1</h3>
+                    <p>Building a modern e-commerce website using React and Node.js.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x300" alt="Project 2">
+                <div class="content">
+                    <h3>Project 2</h3>
+                    <p>Developing a mobile app with React Native and Firebase for real-time data.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x300" alt="Project 3">
+                <div class="content">
+                    <h3>Project 3</h3>
+                    <p>Creating a personal blog website with full-stack technologies and a CMS backend.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2>Contact Me</h2>
+        <p style="text-align: center;">Feel free to reach out to me for any inquiries, collaboration, or feedback!</p>
+        <div style="text-align: center;">
+            <a href="mailto:your-email@example.com" class="btn">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
